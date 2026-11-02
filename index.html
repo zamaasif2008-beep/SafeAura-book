@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SafeAura | Women's Safety Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Inter+Tight:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP HEADER -->
+<header class="top">
+  <div class="top-actions">
+    <button class="box lbl" id="btn-open-reg">Get Started / Register</button>
+    <button class="box lbl" id="btn-active-mode" style="display:none"></button>
+  </div>
+  <div class="logo"><b>SafeAura</b><i>WOMEN'S SAFETY PLATFORM</i></div>
+  <span class="lbl r">Open 24/7 &middot; 12 Safety Tools</span>
+</header>
+
+<!-- CATEGORY TABS -->
+<nav class="tabs" aria-label="Safety modes"><i class="ind"></i>
+  <button class="lbl" data-g="all">All</button>
+  <button class="lbl" data-g="Personal">Personal</button>
+  <button class="lbl" data-g="Corporate">Corporate</button>
+  <button class="lbl" data-g="Community">Community</button>
+</nav>
+
+<!-- 3D BOOKSHELF (NO REPETITION) -->
+<section class="shelf" id="shelf" aria-label="Safety tools shelf"><div class="stage" id="stage"></div></section>
+<button class="play" id="play" aria-label="Open tool"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 0L12 6L1 12Z" fill="currentColor"/></svg></button>
+
+<!-- CAPTIONS -->
+<div class="cap" id="cap" aria-live="polite">
+  <div class="ln t"></div>
+  <div class="ln s lbl"></div>
+  <div class="ln y"></div>
+</div>
+
+<!-- ARROWS -->
+<button class="arrow l" id="prev" aria-label="Previous tool"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M5 1L1 5L5 9M1 5H17"/></svg></button>
+<button class="arrow rt" id="next" aria-label="Next tool"><svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M13 1L17 5L13 9M17 5H1"/></svg></button>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <span class="lbl">&copy; SafeAura. Compliant with Indian Data Protection Principles.</span>
+  <span class="lbl" id="status-pill">System Status: 24/7 Online</span>
+</footer>
+<div class="grain"></div>
+
+<!-- TOOL DETAIL MODAL -->
+<section class="detail" id="detail" role="dialog" aria-modal="true" aria-label="Tool details">
+  <button class="box lbl close" id="close">Close</button>
+  <div class="logo dlogo"><b>SafeAura</b><i>WOMEN'S SAFETY PLATFORM</i></div>
+  <div class="dl">
+    <div class="m"><span class="lbl cob" id="d-sub"></span></div>
+    <div class="m"><h2 id="d-title"></h2></div>
+    <div class="m"><span class="lbl mut" id="d-meta"></span></div>
+    <div class="m"><p id="d-desc"></p></div>
+    <div class="m"><p class="cr" id="d-note"></p></div>
+    <div class="m"><button class="box go lbl" id="d-go">Launch Interactive Tool &rarr;</button></div>
+  </div>
+  <div class="dr"><svg class="post" id="post" viewBox="0 0 474 900" aria-hidden="true"></svg></div>
+</section>
+
+<!-- INTERACTIVE TOOL RUNNER MODAL -->
+<div class="tool-modal" id="toolModal" role="dialog" aria-hidden="true">
+  <div class="tool-modal-card">
+    <div class="tool-modal-head">
+      <div class="tool-modal-meta">
+        <span class="lbl cob" id="tm-cat">SAFETY TOOL</span>
+        <h3 id="tm-title">Tool Title</h3>
+      </div>
+      <button class="box lbl" id="tm-close">Exit Tool</button>
+    </div>
+    <div class="tool-modal-body" id="tm-body"></div>
+  </div>
+</div>
+
+<!-- REGISTRATION & AADHAAR ONBOARDING MODAL -->
+<div class="reg-modal" id="regModal" role="dialog" aria-hidden="true">
+  <div class="reg-card">
+    <button class="box lbl reg-close" id="regClose">Close</button>
+    <div id="regFlow"></div>
+  </div>
+</div>
+
+<div class="cur" id="cur"><i class="ring"></i><i class="dot"></i><b>OPEN</b></div>
+
+<script src="js/data.js"></script>
+<script src="js/art.js"></script>
+<script src="js/shelf.js"></script>
+<script src="js/detail.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
